@@ -1,0 +1,34 @@
+﻿@using Assignment_2.Models
+@model IEnumerable<SkiResort>
+
+@{
+    ViewBag.Title = "Resorts";
+}
+
+<h2>Resorts</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Resort Name</td>
+            <td>Location</td>
+            <td>Base Elevation</td>
+            <td>Top Elevation</td>
+            <td>Number of Lifts</td>
+            <td>Other</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var resort in Model)
+        {
+            <tr>
+                <td>@resort.Name</td>
+                <td>@resort.Location</td>
+                <td>@resort.BaseElevation</td>
+                <td>@resort.TopElevation</td>
+                <td>@resort.NumberOfLifts</td>
+                <td>Pass Options</td>
+            </tr>
+        }
+    </tbody>
+</table>
